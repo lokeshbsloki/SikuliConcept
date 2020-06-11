@@ -19,6 +19,11 @@ public class SikuliYoutubeVideoTest {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.youtube.com/watch?v=OtQAMoXYqes");
 		
+		
+		//to automate flash elements on app
+		//it works on based on images
+		//
+		
 		//create an object of screen class --sikuli
 		Screen s= new Screen();
 		
@@ -27,6 +32,19 @@ public class SikuliYoutubeVideoTest {
 		s.wait(play, 20000);
 		s.click();
 		s.click();
+		
+		Pattern settings=new Pattern("settings.png");
+		s.wait(settings, 5000);
+		s.click();
+		
+		Pattern quality=new Pattern("quality.png");
+		s.wait(quality, 5000);
+		s.click();
+		
+		Pattern pix=new Pattern("360p.png");
+		s.wait(pix, 5000);
+		s.click();
+		
 		
 		
 		
